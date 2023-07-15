@@ -1,6 +1,5 @@
 package com.flufly.web.domain;
 
-import com.flufly.web.domain.service.Species;
 import lombok.Getter;
 import lombok.Setter;
 

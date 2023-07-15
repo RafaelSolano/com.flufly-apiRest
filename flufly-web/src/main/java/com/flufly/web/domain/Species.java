@@ -7,10 +7,10 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Category {
-  private Integer categoryId;
-  private String description;
-  private String status;
+public class Species {
+
+  private int speciesId;
+  private String speciesName;
 
 
 }
