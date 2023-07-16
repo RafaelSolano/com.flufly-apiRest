@@ -31,15 +31,16 @@ public class ProductoRepository implements ProductRepository {
 
   @Override
   public Optional<Product> getProduct(int productId) {
-    return productoCrudRepository.findById(productId).map((producto -> mapper.toProducto(producto)));
+    return productoCrudRepository.findById(productId).map((producto -> mapper.toProduct(producto)));
   }
 
   @Override
   public Product save(Product product) {
-    return null;
+
+    Producto producto = mapper.toProducto(product);
+    return mapper.toProduct(productoCrudRepository.save(producto));
   }
-
-
+  
 
   @Override
    public void delete(int productId){
