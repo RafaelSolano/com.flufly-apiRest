@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface productoCrudRepository extends CrudRepository <Producto, Integer> {
+public interface ProductoCrudRepository extends CrudRepository <Producto, Integer> {
 }
