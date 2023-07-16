@@ -29,4 +29,11 @@ public class MascotaPerdida {
   @Column(name = "descripcion")
   private String descripcion;
 
+  @OneToOne
+  @JoinColumns({
+          @JoinColumn(name = "mascotas_id_mascota", referencedColumnName = "id_mascota"),
+          @JoinColumn(name = "mascotas_especie_id_especie", referencedColumnName = "especie_id_especie")
+  })
+  private Mascota mascota;
+
 }

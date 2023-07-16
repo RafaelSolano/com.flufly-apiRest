@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -17,4 +19,10 @@ public class Departamento {
 
   @Column(name = "nombre_departamento")
   private String nombreDepartamento;
+
+  @OneToMany(mappedBy = "departamento")
+  private List<Empleado> empleados;
+
+
+
 }

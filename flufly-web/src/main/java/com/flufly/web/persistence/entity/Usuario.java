@@ -37,6 +37,14 @@ public class Usuario {
   @Column(name = "fecha_nacimiento")
   private LocalDate fechaNacimiento;
 
+  @OneToOne(mappedBy = "usuario")
+  private Cliente cliente;
+
+  @OneToOne(mappedBy = "usuario")
+  private Empleado empleado;
+
+
+
 
 
 }
