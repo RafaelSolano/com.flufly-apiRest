@@ -26,6 +26,16 @@ public class ProductController {
     return new ResponseEntity<>(productService.getAll(), HttpStatus.OK);
   }
 
+  @GetMapping("/{id}")
+  @Operation(summary = "Obtener un Producto por Id")
+  @ApiResponses(value = @ApiResponse(responseCode = "200", description = "OK"))
+  public ResponseEntity<Product>getProduct(@PathVariable("id") int producId){
+    return productService.getProduct(producId).map(
+            product ->  new ResponseEntity<>(product, HttpStatus.OK))
+            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+
+  }
+
   @PostMapping("/save")
   @Operation(summary = "Crear un Producto ")
   @ApiResponses(value = @ApiResponse(responseCode = "201", description = "CREATED"))
