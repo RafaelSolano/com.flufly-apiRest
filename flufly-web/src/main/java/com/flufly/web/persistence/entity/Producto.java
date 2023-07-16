@@ -18,7 +18,7 @@ public class Producto {
   @Column(name = "id_producto")
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private  int idProducto;
+  private  Integer idProducto;
   @Column(name = "nombre_producto")
   private  String nombreProducto;
   private  String referencia;
