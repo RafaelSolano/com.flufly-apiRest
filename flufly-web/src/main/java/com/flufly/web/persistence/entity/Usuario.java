@@ -14,8 +14,8 @@ public class Usuario {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id_usuarios")
-  private  Integer idUsuarios;
+  @Column(name = "id_usuario")
+  private  Integer idUsuario;
   @Column(name = "documento_identidad")
   private String documentoIdentidad;
 

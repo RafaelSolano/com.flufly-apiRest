@@ -37,10 +37,10 @@ public class Producto {
   private   Double precioVenta;
 
   @ManyToOne
-  @JoinColumn(name = "categoria_idcategoria", insertable = false , updatable = false)
+  @JoinColumn(name = "categoria_idcategoria", insertable = true , updatable = true)
   private Categoria categoria;
   @ManyToOne
-  @JoinColumn(name = " especie_id_especie", insertable = false, updatable = false)
+  @JoinColumn(name = " especie_id_especie", insertable = true, updatable = true)
   private Especie  especie;
 
 

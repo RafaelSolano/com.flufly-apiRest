@@ -12,9 +12,9 @@ public class Compra {
 
 
   @Id
-  @Column(name = "id_compras")
+  @Column(name = "id_compra")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer idCompras;
+  private Integer idCompra;
 
   @Column(name = "medio_pago")
   private String medioPago;

@@ -8,13 +8,13 @@ import jakarta.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "comnpras_productos")
+@Table(name = "compras_productos")
 public class ComprasProducto {
 
 
   @Id
-  @Column(name = "id_comnpras_productos")
-  private Integer idComnprasProductos;
+  @Column(name = "id_compras_productos")
+  private Integer idComprasProducto;
 
   @Column(name = "cantidad")
   private Integer cantidad;
