@@ -31,7 +31,7 @@ public class ProductoRepository implements ProductRepository {
 
   @Override
   public Optional<Product> getProduct(int productId) {
-    return Optional.empty();
+    return productoCrudRepository.findById(productId).map((producto -> mapper.toProducto(producto)));
   }
 
   @Override
@@ -39,9 +39,11 @@ public class ProductoRepository implements ProductRepository {
     return null;
   }
 
-  @Override
-  public void delete(int productId) {
 
+
+  @Override
+   public void delete(int productId){
+    productoCrudRepository.deleteById(productId);
   }
 
   @Override
@@ -62,5 +64,11 @@ public class ProductoRepository implements ProductRepository {
   @Override
   public Optional<List<Product>> getScarseProducts(int quantity) {
     return Optional.empty();
+  }
+
+  @Override
+  public boolean existsById(int productId) {
+
+    return productoCrudRepository.existsById(productId);
   }
 }

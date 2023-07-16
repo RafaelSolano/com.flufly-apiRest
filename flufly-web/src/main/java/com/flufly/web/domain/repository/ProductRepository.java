@@ -32,6 +32,7 @@ public interface ProductRepository {
    * Deletes a product from the system.
    *
    * @param productId ID of the product to be deleted.
+   * @return
    */
   void delete (int productId);
   /**
@@ -63,6 +64,8 @@ public interface ProductRepository {
    * @return Optional object containing the list of scarce products if any are found, or an empty Optional if no scarce products are found.
    */
   Optional<List<Product>> getScarseProducts(int quantity);
+
+  boolean  existsById(int productId);
 
 
 }
