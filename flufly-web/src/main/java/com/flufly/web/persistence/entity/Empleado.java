@@ -1,5 +1,6 @@
 package com.flufly.web.persistence.entity;
 
+import com.flufly.web.persistence.EmpleadoPK;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
