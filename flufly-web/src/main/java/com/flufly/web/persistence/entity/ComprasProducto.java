@@ -1,9 +1,6 @@
 package com.flufly.web.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
@@ -24,5 +21,16 @@ public class ComprasProducto {
 
   @Column(name = "estado")
   private Boolean estado;
+
+  // Relación muchos a uno con la entidad Producto
+  @ManyToOne
+  @JoinColumn(name = "productos_id_producto")
+  private Producto producto;
+
+  // Relación muchos a uno con la entidad Compra
+  @ManyToOne
+  @JoinColumn(name = "compras_id_compra")
+  private Compra compra;
+
 
 }

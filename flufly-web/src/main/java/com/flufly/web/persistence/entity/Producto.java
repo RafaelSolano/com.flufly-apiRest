@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -42,6 +43,9 @@ public class Producto {
   @ManyToOne
   @JoinColumn(name = " especie_id_especie", insertable = true, updatable = true)
   private Especie  especie;
+
+  @OneToMany(mappedBy = "producto")
+  private List<ComprasProducto>comprasProductos;
 
 
 

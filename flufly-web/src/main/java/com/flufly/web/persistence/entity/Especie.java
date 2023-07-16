@@ -21,4 +21,8 @@ public class Especie {
 
   @OneToMany(mappedBy = "especie")
   private List<Producto> productos;
+
+  @OneToMany(mappedBy = "especie")
+  private List<Mascota> mascotas;
+
 }

@@ -31,4 +31,19 @@ public class Mascota {
   @Column(name = "foto")
   private String foto;
 
+  @ManyToOne
+  @JoinColumn(name = "especie_id_especie")
+  private Especie especie;
+
+  @ManyToOne
+  @JoinColumns({
+          @JoinColumn(name = "clientes_id_cliente", referencedColumnName = "id_cliente"),
+          @JoinColumn(name = "clientes_usuarios_id_usuario", referencedColumnName = "usuarios_id_usuario")
+  })
+  private Cliente cliente;
+
+
+  @OneToOne(mappedBy = "mascota", cascade = CascadeType.ALL)
+  private MascotaPerdida mascotaPerdida;
+
 }
